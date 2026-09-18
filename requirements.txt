@@ -1,0 +1,5 @@
+# Streamlit Community Cloud frontend ONLY. Windows server uses pyproject.toml.
+streamlit==1.63.0
+paramiko>=4,<5
+PySocks>=1.7,<2
+plotly>=5.24,<7

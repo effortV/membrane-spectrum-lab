@@ -1,0 +1,32 @@
+# Human-readable policy file; runtime defaults live in xps_agent.config.
+project:
+  objective: "Discover new, testable XPS-derived physical descriptors for NF/RO membranes"
+  known_baselines_only:
+    - HABD
+    - HCD
+    - HAD
+    - cross-linking degree
+    - O2/O1
+  claim_policy: "No descriptor is called a discovery until nested group validation and evidence review pass."
+
+data:
+  authoritative_tables:
+    - D:\data\XPS-914\NF.xlsx
+    - D:\data\XPS-914\RO.xlsx
+  spectra_sources:
+    - D:\zzh\XPS-agent\final\NF-N
+    - D:\zzh\XPS-agent\final\NF-O
+    - D:\zzh\XPS-agent\final\RO-N
+    - D:\zzh\XPS-agent\final\RO-O
+  legacy_policy: "Read spectra and provenance only; never import legacy fitted models or scores."
+
+validation:
+  grouping_priority: [doi, article_id, source_file]
+  outer_cv: grouped
+  inner_cv: grouped
+  forbidden:
+    - select models using the held-out test set
+    - filter targets before splitting
+    - require train R2 to exceed test R2
+    - mix the same DOI between train and test
+

@@ -1,0 +1,25 @@
+[server]
+headless = true
+address = "127.0.0.1"
+port = 8501
+enableXsrfProtection = true
+maxUploadSize = 500
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#345B76"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F4F6"
+textColor = "#202A36"
+font = "sans serif"
+headingFontSizes = ["1.8rem", "1.4rem", "1.12rem", "1rem", "1rem", "1rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+metricValueFontSize = "1.65rem"
+baseRadius = "0.3rem"
+buttonRadius = "0.3rem"
+
+[theme.sidebar]
+headingFontSizes = ["1.3rem", "1.3rem", "1.3rem", "1rem", "1rem", "1rem"]
